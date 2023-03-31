@@ -1,2 +1,2 @@
 # Debug_Thugz
-Project 1 Server Api
+Project 1 Server API
