@@ -1,6 +1,7 @@
 // link api
 
 function getIdGenre() {
+
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
