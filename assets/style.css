@@ -12,7 +12,6 @@ h1{
 }
 
 .movies{
-    display:flex;
     margin-left:20px;
     border-bottom: 3px #B3B3C7;
     border-style: solid;
@@ -21,6 +20,7 @@ h1{
     border-right:none;
     max-width:35%;
     margin-right:0px;
+    white-space: nowrap;
 }
 
 .movieName{
