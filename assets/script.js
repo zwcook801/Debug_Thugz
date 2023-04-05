@@ -131,7 +131,7 @@ function getMovies(genreId) {
 
 function showWatchlist() {
     var watchlistDiv = document.getElementById('watchlist');
-    watchlistDiv.innerHTML = ''; // clear the existing watchlist
+    watchlistDiv.innerHTML = '';
     watchlist.forEach(movie => {
         var movieDiv = document.createElement('div');
         movieDiv.className = 'movies';
