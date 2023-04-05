@@ -38,8 +38,8 @@ function getMovies(genreId) {
             // image for each movie
             // https://developers.themoviedb.org/3/getting-started/images
             result.results.forEach(movie => document.body.innerHTML = document.body.innerHTML + `<div class="movies" movie-id="${movie.id}">
-            <h2>${movie.title}</h2>
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="movie image">
+            <h2 class="movieName">${movie.title}</h2>
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="movie image" class="movieImg">
             </div>`);
         })
         .catch(error => console.log('error', error));
