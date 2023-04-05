@@ -28,11 +28,15 @@ h1{
     color:ghostwhite;
 }
 
-.movieImg{
+img{
     box-shadow: 15px 15px 25px black;
     border-radius: 25px;
     margin-bottom:30px;
     max-height:500px;
+}
+
+#footer img{
+  border-radius:0px;
 }
 
     /* extra code I was using to test margin removal. */
