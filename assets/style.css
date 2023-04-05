@@ -1,5 +1,10 @@
 
 body{
+<<<<<<< HEAD
+    background-color: azure;
+}
+
+=======
     background-color:#28282d;
 }
 
@@ -84,6 +89,7 @@ h1{
       }
     }
 
+>>>>>>> 7c1e543968e91cb6387241a84a05c20cbbd83ae2
 #footer{
     position:fixed;
     align-items: right;
@@ -91,4 +97,7 @@ h1{
     width:100%;
     height:60px;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7c1e543968e91cb6387241a84a05c20cbbd83ae2
