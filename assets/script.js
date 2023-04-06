@@ -1,31 +1,4 @@
-// link api
-
-function getIdGenre() {
-
-    var requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-    };
-
-    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
-        .then(response => response.json())
-        // adds to page instead of console
-        .then(result => {
-            // each genre has a button. 
-            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-            result.genres.forEach(element => document.body.innerHTML = document.body.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
-            var allGenres = Array.from(document.getElementsByClassName(`genres`));
-            allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
-                // choosing a genre will give you a list of movies from that genre
-                var genreId = event.target.getAttribute('genre-id')
-                getMovies(genreId)
-            }))
-
-        })
-        .catch(error => console.log('error', error));
-}
-// getIdGenre()
-
+// link api 798d3829156f2a1840e8049c3a0c46b1
 
 function getDetails() {
     var requestOptions = {
@@ -57,7 +30,9 @@ function getIdGenre() {
     
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
         .then(response => response.json())
+         // adds to page instead of console
         .then(result => {
+            // each genre has a button. 
             var genredivparent = document.getElementsByClassName(`genresDiv`)[0]
             result.genres.forEach(element => genredivparent.innerHTML = genredivparent.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
             var allGenres = Array.from(document.getElementsByClassName(`genres`));
@@ -85,20 +60,11 @@ function getMovies(genreId) {
                 movieDiv.className = 'movies';
                 movieDiv.setAttribute('movie-id', movie.id);
                 movieDiv.innerHTML = `
-<<<<<<< HEAD
-                  <h2>${movie.title}</h2>
-                  <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="movie image"> 
-                  <p>${movie.overview}</p>
-                  <p>Rating:${movie.vote_average}</p>
-                  <p>Release Date: ${movie.release_date}</p>
-                  <p>Original Language: ${movie.original_language}</p>
-=======
                   <h2 class="movieName">${movie.title}</h2>
                   <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="movie image"> 
                   <p class="movieRev">${movie.overview}</p>
                   <p>Rating: ${movie.vote_average}</p>
                   <p>Release Date: ${movie.release_date}</p>
->>>>>>> 1b2b632410cc1a75ceb2da530dcb9342f86d5c60
                   <button class="add-to-watchlist" data-movie='${JSON.stringify(movie)}'>Add to Watchlist</button>`;
                   moviedivparent.appendChild(movieDiv);
             });
@@ -123,17 +89,9 @@ function getMovies(genreId) {
         })
         .catch(error => console.log('error', error));
 }
-function getTvshows() {
-    var requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-      };
-      
-      fetch("https://api.themoviedb.org/3/discover/tv?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=35&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0", requestOptions)
-        .then(response => response.json())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
-}
+
+
+
 
 function showWatchlist() {
     var watchlistDiv = document.getElementById('watchlist');
