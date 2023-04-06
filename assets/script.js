@@ -90,6 +90,7 @@ function getMovies(genreId) {
                   <p>${movie.overview}</p>
                   <p>Rating:${movie.vote_average}</p>
                   <p>Release Date: ${movie.release_date}</p>
+                  <p>Original Language: ${movie.original_language}</p>
                   <button class="add-to-watchlist" data-movie='${JSON.stringify(movie)}'>Add to Watchlist</button>`;
                   moviedivparent.appendChild(movieDiv);
             });
