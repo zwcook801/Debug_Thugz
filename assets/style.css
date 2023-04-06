@@ -12,6 +12,20 @@ h1{
     justify-content: center;
 }
 
+.moviesDiv{
+  display:flex;
+  align-items:;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: ghostwhite;
+  /* border-bottom: 3px ghostwhite;
+  border-style:solid; */
+}
+
+/* .movieRev{
+  color:yellow;
+} */
+
 .movies{
     margin-left:20px;
     border-bottom: 3px #B3B3C7;
@@ -19,13 +33,13 @@ h1{
     border-top:none;
     border-left:none;
     border-right:none;
-    max-width:35%;
+    max-width:28%;
     margin-right:0px;
-    white-space: nowrap;
 }
 
 .movieName{
     color:ghostwhite;
+    font-size:35px;
 }
 
 img{
