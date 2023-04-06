@@ -85,12 +85,20 @@ function getMovies(genreId) {
                 movieDiv.className = 'movies';
                 movieDiv.setAttribute('movie-id', movie.id);
                 movieDiv.innerHTML = `
+<<<<<<< HEAD
                   <h2>${movie.title}</h2>
                   <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="movie image"> 
                   <p>${movie.overview}</p>
                   <p>Rating:${movie.vote_average}</p>
                   <p>Release Date: ${movie.release_date}</p>
                   <p>Original Language: ${movie.original_language}</p>
+=======
+                  <h2 class="movieName">${movie.title}</h2>
+                  <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="movie image"> 
+                  <p class="movieRev">${movie.overview}</p>
+                  <p>Rating: ${movie.vote_average}</p>
+                  <p>Release Date: ${movie.release_date}</p>
+>>>>>>> 1b2b632410cc1a75ceb2da530dcb9342f86d5c60
                   <button class="add-to-watchlist" data-movie='${JSON.stringify(movie)}'>Add to Watchlist</button>`;
                   moviedivparent.appendChild(movieDiv);
             });
