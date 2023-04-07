@@ -92,6 +92,8 @@ function getMovies(genreId) {
                         if (!watchlist.some(movie => movie.id === movieData.id)) {
                             watchlist.push(movieData);
                             localStorage.setItem('watchlist', JSON.stringify(watchlist));
+                            showWatchlist();
+                            button.innerHTML = "Added to Watchlist"
                             console.log(watchlist);
                         } else {
                             alert("This movie is already in your watchlist!");

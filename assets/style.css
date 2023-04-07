@@ -145,3 +145,44 @@ img {
     min-width: 196px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#watchlist {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width: 100%;
+}
+
+#watchlist h2{
+  font-family: 'Times New Roman', Times, serif;
+  color: ghostwhite;
+  font-size: 35px;
+}
+
+#watchlist img {
+  border-radius: 0px;
+  box-shadow: none;
+  height: 300px;
+  width: auto;
+  margin: 0;
+  padding-right: 2%;
+
+}
+
+#watchlist .movies {
+
+}
