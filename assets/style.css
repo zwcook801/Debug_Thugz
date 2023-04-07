@@ -1,9 +1,7 @@
-html, body{
+html,
+body {
   max-width: 100%;
-  overflow-x:hidden;
-}
-body{
-    background-color:#28282d;
+  overflow-x: hidden;
 }
 
 h1{
@@ -20,9 +18,9 @@ h1{
     -webkit-text-fill-color: transparent; */
 }
 
-button{
+button {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -37,9 +35,9 @@ button{
   cursor: pointer;
 }
 
-.mgBtnFlex{
-    display:flex;
-    justify-content: center;
+.mgBtnFlex {
+  display: flex;
+  justify-content: center;
 }
 
 #genresbtn{
@@ -55,41 +53,42 @@ button{
   margin-bottom:4vh;
 }
 
-.moviesDiv{
-  display:flex;
+.moviesDiv {
+  display: flex;
   justify-content: space-around;
-  align-items: flex-start; /* ask team about flex-end instead */
+  align-items: flex-start;
+  /* ask team about flex-end instead */
   flex-wrap: wrap;
   color: #D4D4D6;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.5vh;
 }
 
-.movies{
-    margin-left:20px;
-    /* border-bottom: 3px #CACACC; */
-    /* border-style: solid;
+.movies {
+  margin-left: 20px;
+  /* border-bottom: 3px #CACACC; */
+  /* border-style: solid;
     border-top:none;
     border-left:none;
     border-right:none; */
-    max-width:28%;
-    margin-right:0px;
+  max-width: 28%;
+  margin-right: 0px;
 }
 
-.movieName{
+.movieName {
   font-family: 'Times New Roman', Times, serif;
-  color:ghostwhite;
-  font-size:35px;
+  color: ghostwhite;
+  font-size: 35px;
 }
 
-img{
-    box-shadow: 15px 15px 25px black;
-    border-radius: 25px;
-    margin-bottom:30px;
-    max-height:600px;
+img {
+  box-shadow: 15px 15px 25px black;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  max-height: 600px;
 }
 
-#footer{
+#footer {
   /* other footer alignment options that may be used later */
   /* position: absolute;
     bottom: 0;
@@ -98,7 +97,7 @@ img{
     height:100px;
     background:#ccc; */
 
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width:100%;
@@ -107,13 +106,13 @@ img{
   margin-bottom:1vh;
 }
 
-#footer img{
-  border-radius:0px;
+#footer img {
+  border-radius: 0px;
   box-shadow: none;
-  height:80px;
-  width:auto;
-  margin:0;
-  padding-right:2%;
+  height: 80px;
+  width: auto;
+  margin: 0;
+  padding-right: 2%;
 }
 
 .genres{
