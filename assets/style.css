@@ -46,6 +46,8 @@ button{
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-top:4vh;
+  margin-bottom:4vh;
 }
 
 .moviesDiv{
@@ -118,6 +120,10 @@ img{
       border-radius: 8px;
       box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
       box-sizing: border-box;
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      margin-left: 1vw;
+      margin-right: 1vw;
       color: #FFFFFF;
       font-family: Phantomsans, sans-serif;
       line-height: 1em;
