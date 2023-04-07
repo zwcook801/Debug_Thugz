@@ -151,6 +151,24 @@ img {
   }
 }
 
+@media screen and (max-width: 1450px) {
+  .movies{
+    max-width: 35%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .movies{
+    max-width:45%;
+    margin-left:1vw;
+    margin-right:0px;
+  }
+
+  img{
+    max-height: 450px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .genres{
     font-size:15px;
