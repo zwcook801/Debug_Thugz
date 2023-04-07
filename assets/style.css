@@ -1,27 +1,29 @@
-html, body{
+html,
+body {
   max-width: 100%;
-  overflow-x:hidden;
-}
-body{
-    background-color:#28282d;
+  overflow-x: hidden;
 }
 
-h1{
-    color: ghostwhite;
-    display: flex;
-    justify-content: center;
-    font-size: 5vh;
-    width:100%;
+body {
+  background-color: #28282d;
+}
 
-    /* elements below is if we want the title to match the button style of color gradient */
-    /* background: -webkit-linear-gradient(300deg, #AF40FF, #5B42F3, #00DDEB);
+h1 {
+  color: ghostwhite;
+  display: flex;
+  justify-content: center;
+  font-size: 5vh;
+  width: 100%;
+
+  /* elements below is if we want the title to match the button style of color gradient */
+  /* background: -webkit-linear-gradient(300deg, #AF40FF, #5B42F3, #00DDEB);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
 }
 
-button{
+button {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -36,53 +38,54 @@ button{
   cursor: pointer;
 }
 
-.mgBtnFlex{
-    display:flex;
-    justify-content: center;
+.mgBtnFlex {
+  display: flex;
+  justify-content: center;
 }
 
-.genresDiv{
-  display:flex;
+.genresDiv {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 
-.moviesDiv{
-  display:flex;
+.moviesDiv {
+  display: flex;
   justify-content: space-around;
-  align-items: flex-start; /* ask team about flex-end instead */
+  align-items: flex-start;
+  /* ask team about flex-end instead */
   flex-wrap: wrap;
   color: #D4D4D6;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.5vh;
 }
 
-.movies{
-    margin-left:20px;
-    /* border-bottom: 3px #CACACC; */
-    /* border-style: solid;
+.movies {
+  margin-left: 20px;
+  /* border-bottom: 3px #CACACC; */
+  /* border-style: solid;
     border-top:none;
     border-left:none;
     border-right:none; */
-    max-width:28%;
-    margin-right:0px;
+  max-width: 28%;
+  margin-right: 0px;
 }
 
-.movieName{
+.movieName {
   font-family: 'Times New Roman', Times, serif;
-  color:ghostwhite;
-  font-size:35px;
+  color: ghostwhite;
+  font-size: 35px;
 }
 
-img{
-    box-shadow: 15px 15px 25px black;
-    border-radius: 25px;
-    margin-bottom:30px;
-    max-height:600px;
+img {
+  box-shadow: 15px 15px 25px black;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  max-height: 600px;
 }
 
-#footer{
+#footer {
   /* other footer alignment options that may be used later */
   /* position: absolute;
     bottom: 0;
@@ -91,53 +94,54 @@ img{
     height:100px;
     background:#ccc; */
 
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  position:absolute;
+  position: absolute;
   z-index: -1;
   overflow: hidden;
-  width:100%;
-  height:auto;
-  color:ghostwhite;
+  width: 100%;
+  height: auto;
+  color: ghostwhite;
 }
 
-#footer img{
-  border-radius:0px;
+#footer img {
+  border-radius: 0px;
   box-shadow: none;
-  height:80px;
-  width:auto;
-  margin:0;
-  padding-right:2%;
+  height: 80px;
+  width: auto;
+  margin: 0;
+  padding-right: 2%;
 }
 
-    .genres{
-      align-items: center;
-      background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-      border: 0;
-      border-radius: 8px;
-      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      font-family: Phantomsans, sans-serif;
-      line-height: 1em;
-      width:5%;
-      padding: 19px 24px;
-      text-decoration: none;
-      touch-action: manipulation;
-      white-space: nowrap;
-      cursor: pointer;
-    }
-    
-    .genres:active,
-    .genres:hover {
-      outline: 0;
-    }
-    
-    @media (min-width: 768px) {
-      .genres, button {
-        font-size: 24px;
-        min-width: 196px;
-      }
-    }
+.genres {
+  align-items: center;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-family: Phantomsans, sans-serif;
+  line-height: 1em;
+  width: 5%;
+  padding: 19px 24px;
+  text-decoration: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
 
+.genres:active,
+.genres:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+
+  .genres,
+  button {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
