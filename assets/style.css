@@ -11,7 +11,7 @@ h1{
     color: ghostwhite;
     display: flex;
     justify-content: center;
-    font-size: 4vw;
+    font-size: 6vh;
     width:100%;
     text-shadow: 4px 4px black;
     /* elements below is if we want the title to match the button style of color gradient */
@@ -148,6 +148,30 @@ img{
   .genres, button {
   font-size: 24px;
   min-width: 196px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .genres{
+    font-size:15px;
+    flex-wrap:wrap;
+    width:32%;
+    flex-direction:row;
+    flex-grow:1;
+  }
+
+  #footer{
+    font-size:4vw;
+    margin-bottom:0.5vh;
+  }
+
+  #footer img{
+    border-radius:0px;
+    box-shadow: none;
+    height:40px;
+    width:auto;
+    margin:0;
+    padding-right:2%;
   }
 }
 
