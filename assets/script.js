@@ -69,6 +69,7 @@ function getMovies(genreId) {
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}&with_watch_monetization_types=flatrate`, requestOptions)
         .then(response => response.json())
         .then(result => {
+            console.log("getMovies", result)
             var moviedivparent = document.getElementsByClassName(`moviesDiv`)[0]
             result.results.forEach(movie => {
                 var movieDiv = document.createElement('div');
@@ -80,9 +81,13 @@ function getMovies(genreId) {
                   <p class="movieRev">${movie.overview}</p>
                   <p>Rating: ${movie.vote_average}</p>
                   <p>Release Date: ${movie.release_date}</p>
+                  <p id=${movie.id + "-link"}>link</p>
                   <button class="add-to-watchlist" data-movie='${JSON.stringify(movie)}'>Add to Watchlist</button>`;
                 moviedivparent.appendChild(movieDiv);
             });
+            getNetflixLinks(result.results)
+
+
 
             var addToWatchlistButtons = Array.from(document.getElementsByClassName('add-to-watchlist'));
             addToWatchlistButtons.forEach(button => {
@@ -106,6 +111,22 @@ function getMovies(genreId) {
         })
         .catch(error => console.log('error', error));
 }
+
+function getNetflixLinks(movies){
+    console.log("getNetflixLinks", movies)
+    var requestOptions = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'fd4fb301f1mshc9090a171201103p1c9e2ejsn5169072e8ce4',
+            //'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+        }
+    };
+fetch(`https://streaming-availability.p.rapidapi.com/v2/search/title?title=${movies[0].title}&country=us&show_type=movie&output_language=en`, requestOptions)
+.then(response => response.json())
+.then(result => console.log("getlinksresults", result))
+}
+
+
 function getTvshows() {
     var requestOptions = {
         method: 'GET',
@@ -173,6 +194,7 @@ function getIdGenre() {
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
         .then(response => response.json())
         .then(result => {
+            console.log("getIdGenre", result)
             result.genres.forEach(element => document.body.innerHTML = document.body.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
             var allGenres = Array.from(document.getElementsByClassName(`genres`));
             allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
@@ -226,4 +248,5 @@ if (storedWatchlist) {
 
 window.addEventListener("load", (event) => {
     showWatchlist();
+    console.log("windowload")
 });
