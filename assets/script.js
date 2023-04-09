@@ -189,7 +189,6 @@ function getIdGenre() {
 
 var elem = document.getElementById("genresbtn");
 elem.addEventListener('click', function () {
-    debugger
     genresbtn.style.visibility = 'hidden';
     getIdGenre();
 });
