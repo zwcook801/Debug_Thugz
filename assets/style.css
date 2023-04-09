@@ -41,10 +41,13 @@ button {
   justify-content: center;
 }
 
+<<<<<<< HEAD
 #genresbtn{
   box-shadow: 5px 5px 25px black;
 }
 
+=======
+>>>>>>> e595a92f2ebccdcdbaa3181ce0d12325f3b2c0f2
 .genresDiv{
   display:flex;
   flex-wrap: wrap;
@@ -72,6 +75,7 @@ button {
     border-top:none;
     border-left:none;
     border-right:none; */
+<<<<<<< HEAD
   max-width: 28%;
   margin-right: 0px;
 }
@@ -80,6 +84,16 @@ button {
   font-family: 'Times New Roman', Times, serif;
   color: ghostwhite;
   font-size: 35px;
+=======
+    max-width:28%;
+    margin-right:0px;
+}
+
+.movieName{
+  font-family: 'Times New Roman', Times, serif;
+  color:ghostwhite;
+  font-size:35px;
+>>>>>>> e595a92f2ebccdcdbaa3181ce0d12325f3b2c0f2
 }
 
 img {
@@ -89,7 +103,11 @@ img {
   max-height: 600px;
 }
 
+<<<<<<< HEAD
 #footer {
+=======
+#footer{
+>>>>>>> e595a92f2ebccdcdbaa3181ce0d12325f3b2c0f2
   /* other footer alignment options that may be used later */
   /* position: absolute;
     bottom: 0;
