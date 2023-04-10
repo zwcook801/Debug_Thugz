@@ -1,30 +1,3 @@
-// Code commented out after previous merge conflict
-
-// function getIdGenre() {
-
-//     var requestOptions = {
-//         method: 'GET',
-//         redirect: 'follow'
-//     };
-
-//     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
-//         .then(response => response.json())
-//         // adds to page instead of console
-//         .then(result => {
-//             // each genre has a button.
-//             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-//             result.genres.forEach(element => document.body.innerHTML = document.body.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
-//             var allGenres = Array.from(document.getElementsByClassName(`genres`));
-//             allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
-//                 // choosing a genre will give you a list of movies from that genre
-//                 var genreId = event.target.getAttribute('genre-id')
-//                 getMovies(genreId)
-//             }))
-
-//         })
-//         .catch(error => console.log('error', error));
-// }
-
 //Set the function getDetails that uses the variable requestOptions for the purpose of setting of passing to the URL used in the fetch below
 function getDetails() {
   var requestOptions = {
@@ -45,29 +18,6 @@ function getDetails() {
 // Setting watchlist as empty which can be used later in the code
 var watchlist = [];
 
-//Duplicate code commented out
-// function getIdGenre() {
-//     var requestOptions = {
-//         method: 'GET',
-//         redirect: 'follow'
-//     };
-
-//     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
-//         .then(response => response.json())
-//         .then(result => {
-//             var genredivparent = document.getElementsByClassName(`genresDiv`)[0]
-//             result.genres.forEach(element => genredivparent.innerHTML = genredivparent.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
-//             var allGenres = Array.from(document.getElementsByClassName(`genres`));
-//             allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
-//                 var genreId = event.target.getAttribute('genre-id')
-//                 getMovies(genreId)
-//             }))
-
-//         })
-//         .catch(error => console.log('error', error));
-// }
-
-//Set function getMovies
 function getMovies(genreId) {
   
   var requestOptions = {
@@ -174,7 +124,7 @@ function showWatchlist() {
     movieDiv.innerHTML = `
           <h2>${movie.title}</h2>
           <div>
-            <a href="${movie.link}">${movie.link}</a>
+            <a class="trailer" href="${movie.link}">${movie.link}</a>
           </div>
           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">`;
     watchlistDiv.appendChild(movieDiv);
@@ -199,19 +149,10 @@ function showWatchlist() {
   });
 }
 
-// var elem = document.getElementById("genresbtn");
-// elem.addEventListener('click', function () {
-//     getIdGenre();
-// });
-
 var storedWatchlist = localStorage.getItem("watchlist");
 if (storedWatchlist) {
   watchlist = JSON.parse(storedWatchlist);
 }
-
-// window.addEventListener("load", (event) => {
-//     showWatchlist();
-// });
 
 var watchlist = [];
 
@@ -232,45 +173,8 @@ function getIdGenre() {
                 getMovies(genreId)
             }))
         })
-      );
-    })
     .catch((error) => console.log("error", error));
 }
-
-
-// function showWatchlist() {
-//     var watchlistDiv = document.getElementById('watchlist');
-//     watchlistDiv.innerHTML = '';
-//     watchlist.forEach(movie => {
-//         var movieDiv = document.createElement('div');
-//         movieDiv.className = 'movies';
-//         movieDiv.setAttribute('movie-id', movie.id);
-//         movieDiv.innerHTML = `
-//           <h2>${movie.title}</h2>
-//           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">`;
-//         watchlistDiv.appendChild(movieDiv);
-//         console.log(movie);
-//         watchlistDiv.addEventListener('click', function (event) {
-//             if (event.target.classList.contains('remove-from-watchlist')) {
-//                 var movieId = event.target.parentNode.getAttribute('movie-id');
-//                 watchlist = watchlist.filter(movie => movie.id != movieId);
-//                 localStorage.setItem('watchlist', JSON.stringify(watchlist));
-//                 showWatchlist();
-//             }
-//         });
-
-//         movieDiv.innerHTML = `
-//     <h2>${movie.title}</h2>
-//     <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">
-//     <button class="remove-from-watchlist">Remove</button>
-// `;
-//     });
-// }
-
-var elem = document.getElementById("genresbtn");
-elem.addEventListener("click", function () {
-  getIdGenre();
-
 
 var elem = document.getElementById("genresbtn");
 elem.addEventListener('click', function () {
