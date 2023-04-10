@@ -122,8 +122,8 @@ function showWatchlist() {
         movieDiv.setAttribute("movie-id", movie.id);
         movieDiv.innerHTML = `
           <h2>${movie.title}</h2>
-          <div>
-            <a class="trailer" href="${movie.link}">${movie.link}</a>
+          <div class=trailer >
+          <a href="${movie.link}" target="_blank">Click Here To Trailer!</a>
           </div>
           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">`;
         watchlistDiv.appendChild(movieDiv);
@@ -139,8 +139,8 @@ function showWatchlist() {
 
         movieDiv.innerHTML = `
     <h2>${movie.title}</h2>
-    <div>
-        <a href="${movie.link}">${movie.link}</a>
+    <div class=trailer >
+    <a href="${movie.link}" target="_blank">Click Here To Trailer!</a>
     </div>
     <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">
     <button class="remove-from-watchlist">Remove</button>

@@ -143,19 +143,37 @@ img {
 #watchlist {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
   margin: 10px 50px 10px 50px;
   width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 #watchlist h2 {
   font-family: 'Times New Roman', Times, serif;
   color: ghostwhite;
   font-size: 2.25vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #watchlist img {
   height: 300px;
+  width: auto;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.remove-from-watchlist {
+  display: block;
+  width: auto;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.trailer {
   width: auto;
   margin: 0;
   margin-bottom: 15px;
