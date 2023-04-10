@@ -95,7 +95,6 @@ function getMovies(genreId) {
                   <p class="movieRev">${movie.overview}</p>
                   <p>Rating: ${movie.vote_average}</p>
                   <p>Release Date: ${movie.release_date}</p>
-                  <p id=${movie.id + "-link"}>link</p>
                   <button class="add-to-watchlist" data-movie='${JSON.stringify(
                     movie
                   )}'>Add to Watchlist</button>`;
