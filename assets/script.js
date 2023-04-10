@@ -69,6 +69,7 @@ var watchlist = [];
 
 //Set function getMovies
 function getMovies(genreId) {
+  
   var requestOptions = {
     method: "GET",
     redirect: "follow",
@@ -215,34 +216,27 @@ if (storedWatchlist) {
 var watchlist = [];
 
 function getIdGenre() {
-  var requestOptions = {
-    method: "GET",
-    redirect: "follow",
-  };
+  
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
 
-  fetch(
-    "https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US",
-    requestOptions
-  )
-    .then((response) => response.json())
-    .then((result) => {
-      console.log("getIdGenre", result);
-      result.genres.forEach(
-        (element) =>
-          (document.body.innerHTML =
-            document.body.innerHTML +
-            `<button class="genres" genre-id="${element.id}">${element.name}</button>`)
-      );
-      var allGenres = Array.from(document.getElementsByClassName(`genres`));
-      allGenres.forEach((genrebtn) =>
-        genrebtn.addEventListener("click", function (event) {
-          var genreId = event.target.getAttribute("genre-id");
-          getMovies(genreId);
+    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            result.genres.forEach(element => document.body.innerHTML = document.body.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
+            var allGenres = Array.from(document.getElementsByClassName(`genres`));
+            allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
+                var genreId = event.target.getAttribute('genre-id')
+                getMovies(genreId)
+            }))
         })
       );
     })
     .catch((error) => console.log("error", error));
 }
+
 
 // function showWatchlist() {
 //     var watchlistDiv = document.getElementById('watchlist');
@@ -276,6 +270,12 @@ function getIdGenre() {
 var elem = document.getElementById("genresbtn");
 elem.addEventListener("click", function () {
   getIdGenre();
+
+
+var elem = document.getElementById("genresbtn");
+elem.addEventListener('click', function () {
+    genresbtn.style.visibility = 'hidden';
+    getIdGenre();
 });
 
 var storedWatchlist = localStorage.getItem("watchlist");
