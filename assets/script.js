@@ -1,6 +1,12 @@
+// link api 798d3829156f2a1840e8049c3a0c46b1
 
 // function getIdGenre() {
+// function getIdGenre() {
 
+//     var requestOptions = {
+//         method: 'GET',
+//         redirect: 'follow'
+//     };
 //     var requestOptions = {
 //         method: 'GET',
 //         redirect: 'follow'
@@ -19,7 +25,23 @@
 //                 var genreId = event.target.getAttribute('genre-id')
 //                 getMovies(genreId)
 //             }))
+//     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
+//         .then(response => response.json())
+//         // adds to page instead of console
+//         .then(result => {
+//             // each genre has a button. 
+//             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+//             result.genres.forEach(element => document.body.innerHTML = document.body.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
+//             var allGenres = Array.from(document.getElementsByClassName(`genres`));
+//             allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
+//                 // choosing a genre will give you a list of movies from that genre
+//                 var genreId = event.target.getAttribute('genre-id')
+//                 getMovies(genreId)
+//             }))
 
+//         })
+//         .catch(error => console.log('error', error));
+// }
 //         })
 //         .catch(error => console.log('error', error));
 // }
@@ -70,18 +92,22 @@ function getMovies(genreId) {
         .then(response => response.json())
         .then(result => {
             var moviedivparent = document.getElementsByClassName(`moviesDiv`)[0]
+            moviedivparent.innerHTML = ""
             result.results.forEach(movie => {
                 var movieDiv = document.createElement('div');
                 movieDiv.className = 'movies';
                 movieDiv.setAttribute('movie-id', movie.id);
-                movieDiv.innerHTML = `
-                  <h2 class="movieName">${movie.title}</h2>
+                movieDiv.innerHTML =
+                    `<h2 class="movieName">${movie.title}</h2>
                   <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="movie image"> 
                   <p class="movieRev">${movie.overview}</p>
                   <p>Rating: ${movie.vote_average}</p>
                   <p>Release Date: ${movie.release_date}</p>
                   <button class="add-to-watchlist" data-movie='${JSON.stringify(movie)}'>Add to Watchlist</button>`;
                 moviedivparent.appendChild(movieDiv);
+            });
+            document.querySelector('h1').scrollIntoView({
+                behavior: 'smooth'
             });
 
             var addToWatchlistButtons = Array.from(document.getElementsByClassName('add-to-watchlist'));
@@ -92,6 +118,8 @@ function getMovies(genreId) {
                         if (!watchlist.some(movie => movie.id === movieData.id)) {
                             watchlist.push(movieData);
                             localStorage.setItem('watchlist', JSON.stringify(watchlist));
+                            showWatchlist();
+                            button.innerHTML = "Added to Watchlist"
                             console.log(watchlist);
                         } else {
                             alert("This movie is already in your watchlist!");
@@ -177,43 +205,43 @@ function getIdGenre() {
                 var genreId = event.target.getAttribute('genre-id')
                 getMovies(genreId)
             }))
-
         })
         .catch(error => console.log('error', error));
 }
 
 
-// function showWatchlist() {
-//     var watchlistDiv = document.getElementById('watchlist');
-//     watchlistDiv.innerHTML = '';
-//     watchlist.forEach(movie => {
-//         var movieDiv = document.createElement('div');
-//         movieDiv.className = 'movies';
-//         movieDiv.setAttribute('movie-id', movie.id);
-//         movieDiv.innerHTML = `
-//           <h2>${movie.title}</h2>
-//           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">`;
-//         watchlistDiv.appendChild(movieDiv);
-//         console.log(movie);
-//         watchlistDiv.addEventListener('click', function (event) {
-//             if (event.target.classList.contains('remove-from-watchlist')) {
-//                 var movieId = event.target.parentNode.getAttribute('movie-id');
-//                 watchlist = watchlist.filter(movie => movie.id != movieId);
-//                 localStorage.setItem('watchlist', JSON.stringify(watchlist));
-//                 showWatchlist();
-//             }
-//         });
+function showWatchlist() {
+    var watchlistDiv = document.getElementById('watchlist');
+    watchlistDiv.innerHTML = '';
+    watchlist.forEach(movie => {
+        var movieDiv = document.createElement('div');
+        movieDiv.className = 'movies';
+        movieDiv.setAttribute('movie-id', movie.id);
+        movieDiv.innerHTML = `
+          <h2>${movie.title}</h2>
+          <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">`;
+        watchlistDiv.appendChild(movieDiv);
+        console.log(movie);
+        watchlistDiv.addEventListener('click', function (event) {
+            if (event.target.classList.contains('remove-from-watchlist')) {
+                var movieId = event.target.parentNode.getAttribute('movie-id');
+                watchlist = watchlist.filter(movie => movie.id != movieId);
+                localStorage.setItem('watchlist', JSON.stringify(watchlist));
+                showWatchlist();
+            }
+        });
 
-//         movieDiv.innerHTML = `
-//     <h2>${movie.title}</h2>
-//     <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">
-//     <button class="remove-from-watchlist">Remove</button>
-// `;
-//     });
-// }
+        movieDiv.innerHTML = `
+    <h2>${movie.title}</h2>
+    <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="movie image">
+    <button class="remove-from-watchlist">Remove</button>
+`;
+    });
+}
 
 var elem = document.getElementById("genresbtn");
 elem.addEventListener('click', function () {
+    genresbtn.style.visibility = 'hidden';
     getIdGenre();
 });
 

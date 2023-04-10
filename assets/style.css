@@ -2,21 +2,19 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color:#29292E;
 }
 
-body {
-  background-color: #28282d;
-}
-
-h1 {
-  color: ghostwhite;
-  display: flex;
-  justify-content: center;
-  font-size: 5vh;
-  width: 100%;
-
-  /* elements below is if we want the title to match the button style of color gradient */
-  /* background: -webkit-linear-gradient(300deg, #AF40FF, #5B42F3, #00DDEB);
+h1{
+    font-family: 'Bebas Neue', cursive;
+    color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    font-size: 6vh;
+    width:100%;
+    text-shadow: 4px 4px black;
+    /* elements below is if we want the title to match the button style of color gradient */
+    /* background: -webkit-linear-gradient( #AF40FF, #5B42F3, #00DDEB );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
 }
@@ -43,11 +41,20 @@ button {
   justify-content: center;
 }
 
-.genresDiv {
-  display: flex;
+
+#genresbtn{
+  box-shadow: 5px 5px 25px black;
+}
+
+
+
+.genresDiv{
+  display:flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  margin-top:4vh;
+  margin-bottom:4vh;
 }
 
 .moviesDiv {
@@ -97,12 +104,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  z-index: -1;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  color: ghostwhite;
+  width:100%;
+  height:auto;
+  color:ghostwhite;
+  margin-bottom:1vh;
 }
 
 #footer img {
@@ -114,17 +119,22 @@ img {
   padding-right: 2%;
 }
 
-.genres {
+.genres{
   align-items: center;
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-shadow: 3px 3px 15px black;
   box-sizing: border-box;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
   color: #FFFFFF;
   font-family: Phantomsans, sans-serif;
   line-height: 1em;
-  width: 5%;
+  width:5%;
   padding: 19px 24px;
   text-decoration: none;
   touch-action: manipulation;
@@ -138,10 +148,77 @@ img {
 }
 
 @media (min-width: 768px) {
-
-  .genres,
-  button {
-    font-size: 24px;
-    min-width: 196px;
+  .genres, button {
+  font-size: 24px;
+  min-width: 196px;
   }
 }
+
+@media screen and (max-width: 1450px) {
+  .movies{
+    max-width: 35%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .movies{
+    max-width:45%;
+    margin-left:1vw;
+    margin-right:0px;
+  }
+
+  img{
+    max-height: 450px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .genres{
+    font-size:15px;
+    flex-wrap:wrap;
+    width:32%;
+    flex-direction:row;
+    flex-grow:1;
+  }
+
+  #footer{
+    font-size:3vw;
+    margin-bottom:0.5vh;
+  }
+
+  #footer img{
+    border-radius:0px;
+    box-shadow: none;
+    height:40px;
+    width:auto;
+    margin:0;
+    padding-right:2%;
+  }
+}
+
+#watchlist {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width: 100%;
+}
+
+#watchlist h2{
+  font-family: 'Times New Roman', Times, serif;
+  color: ghostwhite;
+  font-size: 35px;
+}
+
+#watchlist img {
+  border-radius: 0px;
+  box-shadow: none;
+  height: 300px;
+  width: auto;
+  margin: 0;
+  padding-right: 2%;
+
+}
+
+/* #watchlist .movies {
+
+} */
