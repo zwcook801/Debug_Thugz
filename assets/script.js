@@ -1,3 +1,5 @@
+// Code commented out after previous merge conflict
+
 // function getIdGenre() {
 
 //     var requestOptions = {
@@ -23,12 +25,14 @@
 //         .catch(error => console.log('error', error));
 // }
 
+//Set the function getDetails that uses the variable requestOptions for the purpose of setting of passing to the URL used in the fetch below
 function getDetails() {
   var requestOptions = {
     method: "GET",
     redirect: "follow",
   };
 
+  //Fetch movies from TMDB, with a response in JSON, console logging the result and capturing any errors
   fetch(
     "https://api.themoviedb.org/3/movie/550?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US",
     requestOptions
@@ -38,8 +42,10 @@ function getDetails() {
     .catch((error) => console.log("error", error));
 }
 
+// Setting watchlist as empty which can be used later in the code
 var watchlist = [];
 
+//Duplicate code commented out
 // function getIdGenre() {
 //     var requestOptions = {
 //         method: 'GET',
@@ -61,12 +67,14 @@ var watchlist = [];
 //         .catch(error => console.log('error', error));
 // }
 
+//Set function getMovies
 function getMovies(genreId) {
   var requestOptions = {
     method: "GET",
     redirect: "follow",
   };
 
+//fetch movies based on genre from TMDB
   fetch(
     `https://api.themoviedb.org/3/discover/movie?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}&with_watch_monetization_types=flatrate`,
     requestOptions
