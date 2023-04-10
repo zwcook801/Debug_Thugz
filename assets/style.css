@@ -160,6 +160,28 @@ img {
   outline: 0;
 }
 
+
+#watchlist {
+  display: flex;
+  flex-wrap:nowrap;
+  flex-direction: row;
+  margin: 10px 50px 10px 50px;
+  width: 100%;
+}
+
+#watchlist h2{
+  font-family: 'Times New Roman', Times, serif;
+  color: ghostwhite;
+  font-size: 2.25vw;
+}
+
+#watchlist img {
+  height: 300px;
+  width: auto;
+  margin: 0;
+  margin-bottom:15px;
+}
+
 @media (min-width: 768px) {
   .genres, button {
   font-size: 24px;
@@ -187,6 +209,21 @@ img {
     font-size: 1.15vw;
     /* min-width: 4vw; */
     padding:15px ;
+  }
+
+  
+
+  /* img{
+    max-height: 450px;
+  } */
+  #watchlist{
+    margin:0;
+    text-align: center;
+    flex-direction: none;
+    align-items: flex-end;
+  }
+  #watchlist h2{
+    font-size:2.25vw !important;
   }
 
   /* img{
@@ -228,6 +265,27 @@ img {
     max-height:350px;
   } */
 }
+
+@media screen and (max-width: 900px) {
+  .movies{
+    margin:0;
+    margin-left: 15px;
+  }
+
+  /* img{
+    max-height:350px;
+  } */
+}
+
+@media screen and (max-width: 767px) {
+  .genres, button{
+    font-size:15px;
+    flex-wrap:wrap;
+    /* width:32%; */
+    flex-direction:row;
+    font-size:1.2vw;
+    padding: 2vw 1vw;
+  }
 
 @media screen and (max-width: 767px) {
   .genres, button{
@@ -329,29 +387,3 @@ img {
   #watchlist h2{
     font-size:2.75vw !important;
   }
-
-}
-
-#watchlist {
-  display: flex;
-  flex-wrap:nowrap;
-  flex-direction: row;
-  margin: 10px 50px 10px 50px;
-  width: 100%;
-}
-
-#watchlist h2{
-  font-family: 'Times New Roman', Times, serif;
-  color: ghostwhite;
-  font-size: 2.25vw;
-}
-
-#watchlist img {
-  height: 300px;
-  width: auto;
-  margin: 0;
-  padding-right: 2%;
-  margin-bottom:15px;
-}
-
-}
