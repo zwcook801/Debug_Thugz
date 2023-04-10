@@ -63,9 +63,9 @@ function getMovies(genreId) {
                             console.log("linkretrieve", link);
                             movieData.link = link;
                             watchlist.push(movieData);
-                            localStorage.setItem("watchlist", JSON.stringify(watchlist));
+                            localStorage.setItem('watchlist', JSON.stringify(watchlist));
                             showWatchlist();
-                            button.innerHTML = "Added to Watchlist";
+                            button.innerHTML = "Added to Watchlist"
                             console.log(watchlist);
                         } else {
                             alert("This movie is already in your watchlist!");
