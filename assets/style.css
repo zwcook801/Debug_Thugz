@@ -191,217 +191,41 @@ img {
   }
 }
 
-@media screen and (max-width: 1450px) {
-  .movies {
-    max-width: 35%;
-  }
 
-  /* img{
-    max-height: 500px;
-  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+#watchlist {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width: 100%;
 }
 
-@media screen and (max-width: 1100px) {
-  .movies {
-    max-width: 45%;
-  }
-
-  .genres,
-  button {
-    /* max-width: 125px; */
-    font-size: 1.15vw;
-    /* min-width: 4vw; */
-    padding: 15px;
-  }
-
-
-
-  /* img{
-    max-height: 450px;
-  } */
-  #watchlist {
-    margin: 0;
-    text-align: center;
-    flex-direction: none;
-    align-items: flex-end;
-  }
-
-  #watchlist h2 {
-    font-size: 2.25vw !important;
-  }
-
-  /* img{
-    max-height: 450px;
-  } */
-  #watchlist {
-    margin: 0;
-    text-align: center;
-    flex-direction: none;
-    align-items: flex-end;
-  }
-
-  #watchlist h2 {
-    font-size: 2.25vw !important;
-  }
-
-  /* img{
-    max-height: 450px;
-  } */
+#watchlist h2 {
+  font-family: 'Times New Roman', Times, serif;
+  color: ghostwhite;
+  font-size: 35px;
 }
 
-@media screen and (max-width: 900px) {
-  .movies {
-    margin: 0;
-    margin-left: 15px;
-  }
+#watchlist img {
+  border-radius: 0px;
+  box-shadow: none;
+  height: 300px;
+  width: auto;
+  margin: 0;
+  padding-right: 2%;
 
-  /* img{
-    max-height:350px;
-  } */
 }
 
-@media screen and (max-width: 900px) {
-  .movies {
-    margin: 0;
-    margin-left: 15px;
-  }
-
-  /* img{
-    max-height:350px;
-  } */
-}
-
-@media screen and (max-width: 900px) {
-  .movies {
-    margin: 0;
-    margin-left: 15px;
-  }
-
-  /* img{
-    max-height:350px;
-  } */
-}
-
-@media screen and (max-width: 767px) {
-
-  .genres,
-  button {
-    font-size: 15px;
-    flex-wrap: wrap;
-    /* width:32%; */
-    flex-direction: row;
-    font-size: 1.2vw;
-    padding: 2vw 1vw;
-  }
-
-  @media screen and (max-width: 767px) {
-
-    .genres,
-    button {
-      font-size: 15px;
-      flex-wrap: wrap;
-      /* width:32%; */
-      flex-direction: row;
-      font-size: 1.2vw;
-      padding: 2vw 1vw;
-    }
-
-    @media screen and (max-width: 767px) {
-
-      .genres,
-      button {
-        font-size: 15px;
-        flex-wrap: wrap;
-        /* width:32%; */
-        flex-direction: row;
-        font-size: 1.2vw;
-        padding: 2vw 1vw;
-      }
-
-      img {
-        border-radius: 8px;
-        box-shadow: 8px 8px 13px black;
-        max-height: 30vw;
-      }
-
-      .footer {
-        font-size: 3vw;
-        margin-bottom: 0.5vh;
-      }
-
-      .footer img {
-        border-radius: 0px;
-        box-shadow: none;
-        height: 40px;
-        width: auto;
-        margin: 0;
-        padding-right: 2%;
-      }
-    }
-
-    @media screen and (max-width: 550px) {
-      .movies {
-        max-width: 48%;
-        margin: 0;
-      }
-
-      /* img{
-    
-  } */
-    }
-
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 9vw;
-      }
-
-      button {
-        font-size: 2.75vw;
-        font-weight: 700;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-
-      /* .genres{
-
-  } */
-      .moviesDiv {
-        max-width: 80%;
-        padding: 0% 10% 0% 10%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 2.75vw;
-      }
-
-      .moviesDiv img {
-        min-height: 30vh;
-        margin-bottom: 15px;
-      }
-
-      .movies {
-        max-width: 100%;
-      }
-
-      .movieName {
-        font-size: 3.5vw;
-        padding-top: 6%;
-      }
-
-      .footer img {
-        width: auto;
-        height: 40px;
-      }
-
-      #watchlist {
-        margin: 0;
-        text-align: center;
-        flex-direction: none;
-        /* justify-content: center; */
-        /* align-items: center; */
-
-      }
-
-      #watchlist h2 {
-        font-size: 2.75vw !important;
-      }
+#watchlist .movies {}
