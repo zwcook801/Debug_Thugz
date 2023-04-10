@@ -2,17 +2,17 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color:#29292E;
+  background-color: #29292E;
 }
 
-h1{
-    font-family: 'Bebas Neue', cursive;
-    color: ghostwhite;
-    display: flex;
-    justify-content: center;
-    font-size: 4.5vw;
-    width:100%;
-    text-shadow: 4px 4px black;
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  color: ghostwhite;
+  display: flex;
+  justify-content: center;
+  font-size: 4.5vw;
+  width: 100%;
+  text-shadow: 4px 4px black;
 }
 
 h3 {
@@ -23,9 +23,9 @@ h3 {
   width: 100%;
 }
 
-a{
-  color:white;
-  font-size:1vw;
+a {
+  color: white;
+  font-size: 1vw;
 }
 
 button {
@@ -42,7 +42,7 @@ button {
   text-decoration: none;
   touch-action: manipulation;
   white-space: nowrap;
-  width:auto;
+  width: auto;
   cursor: pointer;
 }
 
@@ -51,17 +51,17 @@ button {
   justify-content: center;
 }
 
-#genresbtn{
+#genresbtn {
   box-shadow: 5px 5px 25px black;
 }
 
-.genresDiv{
-  display:flex;
-  flex-wrap:wrap;
+.genresDiv {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin-top:4vh;
-  margin-bottom:4vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
 
 .moviesDiv {
@@ -98,9 +98,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:5%;
-  color:ghostwhite;
-  margin-bottom:1vh;
+  height: 5%;
+  color: ghostwhite;
+  margin-bottom: 1vh;
 }
 
 .footer img {
@@ -112,9 +112,9 @@ img {
   padding-right: 2%;
 }
 
-.genres{
+.genres {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -142,120 +142,151 @@ img {
 
 #watchlist {
   display: flex;
-  flex-wrap:nowrap;
-  flex-direction: row;
+  flex-wrap: nowrap;
   margin: 10px 50px 10px 50px;
   width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-#watchlist h2{
+#watchlist h2 {
   font-family: 'Times New Roman', Times, serif;
   color: ghostwhite;
   font-size: 2.25vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #watchlist img {
   height: 300px;
   width: auto;
   margin: 0;
-  margin-bottom:15px;
+  margin-bottom: 15px;
+}
+
+.remove-from-watchlist {
+  display: block;
+  width: auto;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.trailer {
+  width: auto;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
-  .genres, button {
-  font-size: 24px;
-  min-width: 196px;
+
+  .genres,
+  button {
+    font-size: 24px;
+    min-width: 196px;
   }
 }
 
 @media screen and (max-width: 1450px) {
-  .movies{
+  .movies {
     max-width: 35%;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  .movies{
-    max-width:45%;
+  .movies {
+    max-width: 45%;
   }
-  .genres, button{
+
+  .genres,
+  button {
     font-size: 1.15vw;
-    padding:15px ;
+    padding: 15px;
   }
-  #watchlist{
-    margin:0;
+
+  #watchlist {
+    margin: 0;
     text-align: center;
     flex-direction: none;
     align-items: flex-end;
   }
-  #watchlist h2{
-    font-size:2.25vw !important;
+
+  #watchlist h2 {
+    font-size: 2.25vw !important;
   }
-  #watchlist{
-    margin:0;
+
+  #watchlist {
+    margin: 0;
     text-align: center;
     flex-direction: none;
     align-items: flex-end;
   }
-  #watchlist h2{
-    font-size:2.25vw !important;
+
+  #watchlist h2 {
+    font-size: 2.25vw !important;
   }
 }
+
 @media screen and (max-width: 900px) {
-  .movies{
-    margin:0;
+  .movies {
+    margin: 0;
     margin-left: 15px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .genres, button{
-    font-size:15px;
-    flex-wrap:wrap;
+
+  .genres,
+  button {
+    font-size: 15px;
+    flex-wrap: wrap;
     /* width:32%; */
-    flex-direction:row;
-    font-size:1.2vw;
+    flex-direction: row;
+    font-size: 1.2vw;
     padding: 2vw 1vw;
   }
 
-  img{
-    border-radius:8px;
+  img {
+    border-radius: 8px;
     box-shadow: 8px 8px 13px black;
     max-height: 30vw;
   }
 
-  .footer{
-    font-size:3vw;
-    margin-bottom:0.5vh;
+  .footer {
+    font-size: 3vw;
+    margin-bottom: 0.5vh;
   }
 
-  .footer img{
-    border-radius:0px;
+  .footer img {
+    border-radius: 0px;
     box-shadow: none;
-    height:40px;
-    width:auto;
-    margin:0;
-    padding-right:2%;
+    height: 40px;
+    width: auto;
+    margin: 0;
+    padding-right: 2%;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .movies{
-    max-width:48%;
-    margin:0;
+  .movies {
+    max-width: 48%;
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 480px) {
-  h1{
+  h1 {
     font-size: 9vw;
   }
-  button{
+
+  button {
     font-size: 2.75vw;
     font-weight: 700;
     padding-top: 10px;
-    padding-bottom:10px;
+    padding-bottom: 10px;
   }
+
   .moviesDiv {
     max-width: 80%;
     padding: 0% 10% 0% 10%;
@@ -264,29 +295,33 @@ img {
     text-align: center;
     font-size: 2.75vw;
   }
-  .moviesDiv img{
+
+  .moviesDiv img {
     min-height: 30vh;
     margin-bottom: 15px;
   }
-  .movies{
+
+  .movies {
     max-width: 100%;
   }
 
-  .movieName{
+  .movieName {
     font-size: 3.5vw;
     padding-top: 6%;
   }
-  .footer img{
-    width:auto;
-    height:40px;
+
+  .footer img {
+    width: auto;
+    height: 40px;
   }
-  #watchlist{
-    margin:0;
+
+  #watchlist {
+    margin: 0;
     text-align: center;
     flex-direction: none;
   }
-  #watchlist h2{
-    font-size:2.75vw !important;
+
+  #watchlist h2 {
+    font-size: 2.75vw !important;
   }
 }
-
