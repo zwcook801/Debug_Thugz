@@ -334,7 +334,7 @@ img {
 
 #watchlist {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:nowrap;
   flex-direction: row;
   margin: 10px 50px 10px 50px;
   width: 100%;
