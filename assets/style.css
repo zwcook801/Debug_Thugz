@@ -13,10 +13,6 @@ h1{
     font-size: 4.5vw;
     width:100%;
     text-shadow: 4px 4px black;
-    /* elements below is if we want the title to match the button style of color gradient */
-    /* background: -webkit-linear-gradient( #AF40FF, #5B42F3, #00DDEB );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 h3 {
@@ -55,7 +51,6 @@ button {
   justify-content: center;
 }
 
-
 #genresbtn{
   box-shadow: 5px 5px 25px black;
 }
@@ -73,7 +68,6 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  /* ask team about flex-end instead */
   flex-wrap: wrap;
   color: #D4D4D6;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -82,11 +76,6 @@ button {
 
 .movies {
   margin-left: 20px;
-  /* border-bottom: 3px #CACACC; */
-  /* border-style: solid;
-    border-top:none;
-    border-left:none;
-    border-right:none; */
   max-width: 28%;
   margin-right: 0px;
 }
@@ -105,18 +94,10 @@ img {
 }
 
 .footer {
-  /* other footer alignment options that may be used later */
-  /* position:absolute;
-  flex-direction: column-reverse;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height:100px; */
   font-family: 'Times New Roman', Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width:auto; */
   height:5%;
   color:ghostwhite;
   margin-bottom:1vh;
@@ -147,7 +128,6 @@ img {
   font-family: Phantomsans, sans-serif;
   font-size: 1vw;
   line-height: 1em;
-  /* width:5%; */
   padding: 19px 24px;
   text-decoration: none;
   touch-action: manipulation;
@@ -159,7 +139,6 @@ img {
 .genres:hover {
   outline: 0;
 }
-
 
 #watchlist {
   display: flex;
@@ -193,29 +172,16 @@ img {
   .movies{
     max-width: 35%;
   }
-
-  /* img{
-    max-height: 500px;
-  } */
 }
 
 @media screen and (max-width: 1100px) {
   .movies{
     max-width:45%;
   }
-
   .genres, button{
-    /* max-width: 125px; */
     font-size: 1.15vw;
-    /* min-width: 4vw; */
     padding:15px ;
   }
-
-  
-
-  /* img{
-    max-height: 450px;
-  } */
   #watchlist{
     margin:0;
     text-align: center;
@@ -225,10 +191,6 @@ img {
   #watchlist h2{
     font-size:2.25vw !important;
   }
-
-  /* img{
-    max-height: 450px;
-  } */
   #watchlist{
     margin:0;
     text-align: center;
@@ -238,64 +200,13 @@ img {
   #watchlist h2{
     font-size:2.25vw !important;
   }
-
-  /* img{
-    max-height: 450px;
-  } */
 }
-
 @media screen and (max-width: 900px) {
   .movies{
     margin:0;
     margin-left: 15px;
   }
-
-  /* img{
-    max-height:350px;
-  } */
 }
-
-@media screen and (max-width: 900px) {
-  .movies{
-    margin:0;
-    margin-left: 15px;
-  }
-
-  /* img{
-    max-height:350px;
-  } */
-}
-
-@media screen and (max-width: 900px) {
-  .movies{
-    margin:0;
-    margin-left: 15px;
-  }
-
-  /* img{
-    max-height:350px;
-  } */
-}
-
-@media screen and (max-width: 767px) {
-  .genres, button{
-    font-size:15px;
-    flex-wrap:wrap;
-    /* width:32%; */
-    flex-direction:row;
-    font-size:1.2vw;
-    padding: 2vw 1vw;
-  }
-
-@media screen and (max-width: 767px) {
-  .genres, button{
-    font-size:15px;
-    flex-wrap:wrap;
-    /* width:32%; */
-    flex-direction:row;
-    font-size:1.2vw;
-    padding: 2vw 1vw;
-  }
 
 @media screen and (max-width: 767px) {
   .genres, button{
@@ -333,10 +244,6 @@ img {
     max-width:48%;
     margin:0;
   }
-
-  /* img{
-    
-  } */
 }
 
 @media screen and (max-width: 480px) {
@@ -349,9 +256,6 @@ img {
     padding-top: 10px;
     padding-bottom:10px;
   }
-  /* .genres{
-
-  } */
   .moviesDiv {
     max-width: 80%;
     padding: 0% 10% 0% 10%;
@@ -380,10 +284,9 @@ img {
     margin:0;
     text-align: center;
     flex-direction: none;
-    /* justify-content: center; */
-    /* align-items: center; */
-
   }
   #watchlist h2{
     font-size:2.75vw !important;
   }
+}
+
