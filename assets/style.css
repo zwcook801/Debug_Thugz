@@ -10,7 +10,7 @@ h1{
     color: ghostwhite;
     display: flex;
     justify-content: center;
-    font-size: 6vh;
+    font-size: 4.5vw;
     width:100%;
     text-shadow: 4px 4px black;
     /* elements below is if we want the title to match the button style of color gradient */
@@ -29,10 +29,11 @@ button {
   color: #FFFFFF;
   font-family: Phantomsans, sans-serif;
   line-height: 1em;
-  padding: 19px 24px;
+  padding: 10px 15px 10px 15px !important;
   text-decoration: none;
   touch-action: manipulation;
   white-space: nowrap;
+  width:auto;
   cursor: pointer;
 }
 
@@ -46,11 +47,9 @@ button {
   box-shadow: 5px 5px 25px black;
 }
 
-
-
 .genresDiv{
   display:flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   justify-content: space-around;
   align-items: center;
   margin-top:4vh;
@@ -65,7 +64,7 @@ button {
   flex-wrap: wrap;
   color: #D4D4D6;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 1.5vh;
+  font-size: 1.15vw;
 }
 
 .movies {
@@ -82,35 +81,35 @@ button {
 .movieName {
   font-family: 'Times New Roman', Times, serif;
   color: ghostwhite;
-  font-size: 35px;
+  font-size: 2.25vw;
 }
 
 img {
   box-shadow: 15px 15px 25px black;
   border-radius: 25px;
   margin-bottom: 30px;
-  max-height: 600px;
+  max-height: 22vw;
 }
 
-#footer {
+.footer {
   /* other footer alignment options that may be used later */
-  /* position: absolute;
+  /* position:absolute;
+  flex-direction: column-reverse;
     bottom: 0;
     left: 0;
     right: 0;
-    height:100px;
-    background:#ccc; */
-
+    height:100px; */
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100%;
-  height:auto;
+  /* width:auto; */
+  height:5%;
   color:ghostwhite;
   margin-bottom:1vh;
 }
 
-#footer img {
+.footer img {
   border-radius: 0px;
   box-shadow: none;
   height: 80px;
@@ -133,8 +132,9 @@ img {
   margin-right: 1vw;
   color: #FFFFFF;
   font-family: Phantomsans, sans-serif;
+  font-size: 1vw;
   line-height: 1em;
-  width:5%;
+  /* width:5%; */
   padding: 19px 24px;
   text-decoration: none;
   touch-action: manipulation;
@@ -158,35 +158,62 @@ img {
   .movies{
     max-width: 35%;
   }
+
+  /* img{
+    max-height: 500px;
+  } */
 }
 
 @media screen and (max-width: 1100px) {
   .movies{
     max-width:45%;
-    margin-left:1vw;
-    margin-right:0px;
   }
 
-  img{
-    max-height: 450px;
+  .genres, button{
+    /* max-width: 125px; */
+    font-size: 1.15vw;
+    /* min-width: 4vw; */
+    padding:15px ;
   }
+
+  /* img{
+    max-height: 450px;
+  } */
+}
+
+@media screen and (max-width: 900px) {
+  .movies{
+    margin:0;
+    margin-left: 15px;
+  }
+
+  /* img{
+    max-height:350px;
+  } */
 }
 
 @media screen and (max-width: 767px) {
-  .genres{
+  .genres, button{
     font-size:15px;
     flex-wrap:wrap;
-    width:32%;
+    /* width:32%; */
     flex-direction:row;
-    flex-grow:1;
+    font-size:1.2vw;
+    padding: 2vw 1vw;
   }
 
-  #footer{
+  img{
+    border-radius:8px;
+    box-shadow: 8px 8px 13px black;
+    max-height: 30vw;
+  }
+
+  .footer{
     font-size:3vw;
     margin-bottom:0.5vh;
   }
 
-  #footer img{
+  .footer img{
     border-radius:0px;
     box-shadow: none;
     height:40px;
@@ -194,6 +221,58 @@ img {
     margin:0;
     padding-right:2%;
   }
+}
+
+@media screen and (max-width: 550px) {
+  .movies{
+    max-width:48%;
+    margin:0;
+  }
+
+  /* img{
+    
+  } */
+}
+
+@media screen and (max-width: 480px) {
+  h1{
+    font-size: 9vw;
+  }
+  button{
+    font-size: 2.75vw;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom:10px;
+  }
+  /* .genres{
+
+  } */
+  .moviesDiv {
+    max-width: 80%;
+    padding: 0% 10% 0% 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.75vw;
+  }
+  img{
+    min-height: 30vh;
+    margin-bottom: 15px;
+  }
+  .movies{
+    max-width: 100%;
+  }
+
+  .movieName{
+    font-size: 3.5vw;
+    padding-top: 6%;
+  }
+  .footer img{
+    width:auto;
+    height:40px;
+  }
+
+
 }
 
 #watchlist {
