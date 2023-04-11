@@ -84,7 +84,7 @@ async function getTrailerLink(title) {
     var requestOptions = {
         method: "GET",
         headers: {
-            "X-RapidAPI-Key": "fd4fb301f1mshc9090a171201103p1c9e2ejsn5169072e8ce4",
+            "X-RapidAPI-Key": "b676a36433msh5d59e7dc57a7838p1e7789jsn216384a59af3",
             //'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
         },
     };
@@ -165,7 +165,7 @@ function getIdGenre() {
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
         .then(response => response.json())
         .then(result => {
-            result.genres.forEach(element => document.body.innerHTML = document.body.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
+            result.genres.forEach(element => document.getElementById("mainframe").innerHTML = document.getElementById("mainframe").innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
             var allGenres = Array.from(document.getElementsByClassName(`genres`));
             allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
                 var genreId = event.target.getAttribute('genre-id')
