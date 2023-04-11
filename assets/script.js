@@ -84,7 +84,7 @@ async function getTrailerLink(title) {
     var requestOptions = {
         method: "GET",
         headers: {
-            "X-RapidAPI-Key": "fd4fb301f1mshc9090a171201103p1c9e2ejsn5169072e8ce4",
+            "X-RapidAPI-Key": "b676a36433msh5d59e7dc57a7838p1e7789jsn216384a59af3",
             //'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
         },
     };
