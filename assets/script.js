@@ -165,7 +165,7 @@ function getIdGenre() {
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=798d3829156f2a1840e8049c3a0c46b1&language=en-US", requestOptions)
         .then(response => response.json())
         .then(result => {
-            result.genres.forEach(element => document.body.innerHTML = document.body.innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
+            result.genres.forEach(element => document.getElementById("mainframe").innerHTML = document.getElementById("mainframe").innerHTML + `<button class="genres" genre-id="${element.id}">${element.name}</button>`);
             var allGenres = Array.from(document.getElementsByClassName(`genres`));
             allGenres.forEach(genrebtn => genrebtn.addEventListener('click', function (event) {
                 var genreId = event.target.getAttribute('genre-id')
